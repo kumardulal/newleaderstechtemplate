@@ -1,0 +1,176 @@
+/* This css file is linked with 3 component :(Main porpose is to enable animation and media query task)
+ 1. sidebar ,
+ 2. home page 
+ 3.project page */
+
+/* ////////for home page */
+.homecontent {
+  position: static;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: rgba(47, 99, 151, 0.5);
+  justify-content: center;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+/* Project page css here  */
+
+/* css that relates between home page and sidebar */
+.side-bar {
+  position: fixed;
+  display: flex;
+  right: 0px;
+  width: 240px;
+  background-color: rgba(25, 94, 151, 0.568);
+  height: 650px;
+  border-top: solid 5px;
+  border-left-color: rgb(100, 0, 55);
+  border-right-color: rgb(80, 75, 7);
+  top: 2%;
+  bottom: 10%;
+  border-top-right-radius: 500px;
+  border-bottom-left-radius: 700px;
+  animation-name: sidebarAnimation;
+  animation-duration: 8s;
+  animation-iteration-count: 3;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.sidebar-hide-mood {
+  visibility: hidden;
+}
+
+/* \\small screen */
+
+@media screen and (min-width: 599px) {
+  .side-bar {
+    position: fixed;
+    display: flex;
+    right: 0px;
+    width: 240px;
+    background-color: rgba(25, 94, 151, 0.568);
+    height: 650px;
+    border-top: solid 5px;
+    border-left-color: rgb(100, 0, 55);
+    border-right-color: rgb(80, 75, 7);
+    top: 2%;
+    border-top-right-radius: 500px;
+    border-bottom-left-radius: 700px;
+
+    animation-name: sidebarAnimation;
+    animation-duration: 8s;
+    animation-iteration-count: 3;
+  }
+}
+
+/* midium screen */
+
+@media screen and (min-width: 600px) and (max-width: 1199px) {
+  .side-bar {
+    position: fixed;
+    display: flex;
+    right: 0px;
+    width: 300px;
+    background-color: rgba(25, 94, 151, 0.568);
+    height: 700px;
+    border-top: solid 5px;
+    border-left-color: rgb(100, 0, 55);
+    border-right-color: rgb(80, 75, 7);
+    top: 2%;
+    border-top-right-radius: 500px;
+    border-bottom-left-radius: 700px;
+
+    animation-name: sidebarAnimation;
+    animation-duration: 8s;
+    animation-iteration-count: 3;
+  }
+}
+
+/* large screen */
+@media screen and (min-width: 1200px) {
+  .side-bar {
+    position: fixed;
+    display: flex;
+    right: 3%;
+    width: 300px;
+    background-color: rgba(25, 94, 151, 0.568);
+    height: 700px;
+    border-top: solid 5px;
+    border-left-color: rgb(100, 0, 55);
+    border-right-color: rgb(80, 75, 7);
+    top: 2%;
+    border-top-right-radius: 1000px;
+
+    border-bottom-left-radius: 700px;
+
+    animation-name: sidebarAnimation;
+    animation-duration: 8s;
+    animation-iteration-count: 3;
+  }
+  .homecontent {
+    position: static;
+    /* margin-top: 120px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgba(25, 94, 151, 0.568);
+    justify-content: center;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+
+@keyframes sidebarAnimation {
+  0% {
+    background-color: rgba(103, 93, 235, 0.438);
+  }
+  25% {
+    background-color: rgba(90, 158, 235, 0.445);
+  }
+  50% {
+    background-color: rgba(90, 235, 167, 0.445);
+  }
+  100% {
+    background-color: rgba(25, 94, 151, 0.322);
+  }
+}
+
+/* keeping this for further backup */
+
+/* const [windowsize, setWindowSize] = useState({ "height": window.innerHeight, "width": window.innerWidth }) */
+
+/* //toggle is only for smaller dimension screen size
+if (window.matchMedia(WindowSize.small).matches) {
+    menutoggler(styles.smallscreen);
+    setContentPlaceHolder(false)
+
+} else if (window.matchMedia(WindowSize.medium).matches) {
+    setCurrentStyle(styles.mediumScreen)
+    menutoggler(styles.mediumScreen);
+    setContentPlaceHolder(false)
+
+
+}
+else if ((window.matchMedia(WindowSize.large).matches)) {
+    setCurrentStyle(styles.largeScreen)
+    menutoggler(styles.largeScreen);
+    setContentPlaceHolder(true)
+
+}
+else {
+    setCurrentStyle(styles.mediumScreen)
+    setContentPlaceHolder(false)
+
+
+
+    // alert("resize of window failed")
+}
+
+}, [windowsize, menuToggle])
+ */
