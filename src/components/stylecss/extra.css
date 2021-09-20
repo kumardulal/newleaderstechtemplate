@@ -23,7 +23,7 @@
   position: fixed;
   display: flex;
   right: 0px;
-  width: 240px;
+  width: "240px";
   background-color: rgba(25, 94, 151, 0.568);
   height: 650px;
   border-top: solid 5px;
