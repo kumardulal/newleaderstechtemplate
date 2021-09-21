@@ -33,29 +33,7 @@ function Sidebar({ menuToggle }) {
   return (
     <BrowserRouter>
       <div className={sidebarDisplay}>
-        <div style={styles.sidebarItems}>
-          <div>
-            <div style={styles.cardheadings}>
-              <div>Window </div>
-              <div>Height </div>
-              <div>Width </div>
-            </div>
-
-            <div style={styles.showcarditems}>
-              <div style={styles.windowsizeTitle}> pixels </div>
-              <div style={{ color: Colors.primary }}>{windowsize.height}px</div>
-              <div style={{ color: Colors.primary }}>{windowsize.width}px</div>
-            </div>
-
-            {/* ///////////////////////// */}
-            {/* <div
-                        style={{
-                            textAlign: 'center',
-                            fontWeight: "bolder", fontSize: "15px",
-                        }}>KUMAR DULAL</div> */}
-            {/* ///////////////// */}
-          </div>
-        </div>
+        <div style={styles.windowsizeTitle}>........</div>
 
         <div style={styles.navlinkcontainer}>
           <a href="/projectlistpage" style={styles.navitems}>
@@ -69,7 +47,29 @@ function Sidebar({ menuToggle }) {
           <a href="/contactus" style={styles.navitems}>
             <div>Contact us</div>
           </a>
+          <a href="/" style={styles.navitems}>
+            <div>Home</div>
+          </a>
         </div>
+
+        {/* \\\\\\\\\\////////////////// */}
+        <div style={styles.sidebarItems}>
+          <div>
+            <div style={styles.cardheadings}>
+              <div>Window </div>
+              <div>Height </div>
+              <div>Width </div>
+            </div>
+
+            <div style={styles.showcarditems}>
+              <div style={styles.pixelTitle}> pixels </div>
+              <div style={{ color: Colors.primary }}>{windowsize.height}px</div>
+              <div style={{ color: Colors.primary }}>{windowsize.width}px</div>
+            </div>
+          </div>
+        </div>
+
+        {/* //// */}
       </div>
     </BrowserRouter>
   );
@@ -81,32 +81,41 @@ const styles = {
     flexDirection: "row",
     fontWeight: "bolder",
     color: Colors.fontcolor,
-    fontSize: "15px",
+    fontSize: "12px",
     width: "100%",
     padding: "10px",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
   },
 
-  windowsizeTitle: {
+  pixelTitle: {
     fontWeight: "bold",
+    fontSize: "16px",
+    color: Colors.black,
+    margin: "7px ",
   },
+  windowsizeTitle2: {
+    fontWeight: "bold",
+    fontSize: "15px",
+    color: Colors.black,
+  },
+
   showcarditems: {
     display: "flex",
     flexDirection: "row",
     fontWeight: "normal",
     alignItems: "center",
     color: Colors.fontcolor,
-    justifyContent: "space-around",
+    justifyContent: "space-between",
   },
   sidebarItems: {
     position: "relative",
     display: "flex",
-    backgroundColor: "green",
+    backgroundColor: Colors.homeContentcolor,
     height: "56px",
     borderRadius: "7px",
     alignItems: "center",
     width: "180px",
-    justifyContent: "space-between",
+    justifyContent: "center",
   },
   navlinkcontainer: {
     display: "flex",
@@ -115,17 +124,17 @@ const styles = {
     color: Colors.secondary,
     // backgroundColor: "rgba(90, 158, 235, 0.555)",
     borderRadius: "55px",
-    width: "85%",
+    marginTop: "70px",
     height: "35vh",
     flexDirection: "column",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     alignItems: "center",
   },
 
   navitems: {
     display: "flex",
     margin: "10px",
-    backgroundColor: Colors.secondary,
+    backgroundColor: Colors.try3,
     borderRadius: "10px",
     width: "200px",
     height: "55px",

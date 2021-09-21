@@ -1,6 +1,19 @@
 import React from "react";
 import Colors from "../components/smallcomponents/Color";
 import contactimg from "../assets/cover.png";
+import { SiTiktok } from "react-icons/si";
+import socialMedia from "../components/smallcomponents/SocialMedia.js";
+// import { useHistory } from "react-router-dom";
+
+import {
+  AiOutlineFacebook,
+  AiFillYoutube,
+  AiOutlineInstagram,
+  AiFillTwitterCircle,
+  AiFillLinkedin,
+} from "react-icons/ai";
+import { Redirect } from "react-router";
+// import one from "../assets/lottiefiles/one.json";
 
 function Contactus() {
   return (
@@ -9,11 +22,14 @@ function Contactus() {
         display: "flex",
         position: "static",
         flexDirection: "column",
-        marginTop: "120px",
+
         width: "100% ",
         // backgroundColor: Colors.secondary,
       }}
     >
+      <div style={{ height: "150px" }}>
+        iF YOU CAN SEE ME ,yOU ARE NEAR TO ME
+      </div>
       <div
         style={{
           display: "flex",
@@ -42,53 +58,92 @@ function Contactus() {
                   flexDirection: "column",
                 }}
               >
-                <input style={styles.imagestyle} defaultValue="email address" />
-                <input
-                  style={styles.userintstyle}
-                  defaultValue="Your message"
-                />
+                <input style={styles.imagestyle} placeholder="email address" />
+                <input style={styles.userintstyle} placeholder="Your message" />
               </div>
             </div>
 
             <div>
               <button style={styles.textandbutton}>Submit</button>
             </div>
+            <div
+              style={{
+                width: "100%",
+                height: "2px",
+                backgroundColor: "grey",
+                marginTop: "15px",
+              }}
+            ></div>
           </div>
         </div>
 
-        {/* //another containeer */}
+        {/* //another Socialmedioa containeer */}
         <div
           style={{
             margin: "10px",
             width: "390px",
             height: "auto",
-            backgroundColor: Colors.third,
-            borderRadius: "25px",
+            backgroundColor: Colors.homeContentcolor,
+            borderRadius: "20px",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-evenly",
           }}
         >
-          <div style={{ padding: "9px" }}>SOCIAL MEDIA</div>
-          <div style={styles.rightcontainer}>
-            <text style={styles.smtext}>facebook</text>
+          <div
+            style={{
+              padding: "9px",
+              fontSize: "28px",
+              backgroundColor: "purple",
+              borderTopRightRadius: "20px",
+              borderTopLeftRadius: "20px",
+            }}
+          >
+            SOCIAL MEDIA
           </div>
-          <div style={styles.rightcontainer}>
-            <text style={styles.smtext}>YouTube</text>
-          </div>
-          <div style={styles.rightcontainer}>
-            <text style={styles.smtext}>Twitter</text>
-          </div>
-          <div style={styles.rightcontainer}>
-            <text style={styles.smtext}>LinkedIn</text>
-          </div>
-          <div style={styles.rightcontainer}>
-            <text style={styles.smtext}>Instragramn</text>
-          </div>
-          <div style={styles.rightcontainer}>
-            <text style={styles.smtext}>Tiktok</text>
-          </div>
+          <a href={socialMedia.facebook} style={styles.rightcontaineritems}>
+            <div style={styles.iconstyle}>
+              <AiOutlineFacebook />
+            </div>
+            <div style={styles.smtext}>facebook</div>
+          </a>
+
+          <a style={styles.rightcontaineritems} href={socialMedia.youtube}>
+            <div style={styles.iconstyle}>
+              <AiFillYoutube />
+            </div>
+            <div style={styles.smtext}>YouTube</div>
+          </a>
+
+          <a style={styles.rightcontaineritems} href={socialMedia.twitter}>
+            <div style={styles.iconstyle}>
+              <AiFillTwitterCircle />
+            </div>
+            <div style={styles.smtext}>Twitter</div>
+          </a>
+
+          <a style={styles.rightcontaineritems} href={socialMedia.linkedin}>
+            <div style={styles.iconstyle}>
+              <AiFillLinkedin />
+            </div>
+            <div style={styles.smtext}>LinkedIn</div>
+          </a>
+
+          <a style={styles.rightcontaineritems} href={socialMedia.instragram}>
+            <div style={styles.iconstyle}>
+              <AiOutlineInstagram />
+            </div>
+            <div style={styles.smtext}>Instragram</div>
+          </a>
+
+          <a style={styles.rightcontaineritems} href={socialMedia.tiktok}>
+            <div style={styles.iconstyle}>
+              <SiTiktok />
+            </div>
+            <div style={styles.smtext}>Tiktok</div>
+          </a>
         </div>
+        {/* //end of social media container */}
       </div>
     </div>
   );
@@ -100,7 +155,7 @@ const styles = {
     height: "50px",
     borderRadius: "25px",
     color: "white",
-    backgroundColor: Colors.yellow,
+    backgroundColor: Colors.black,
     textAlign: "center",
   },
   imagestyle: {
@@ -118,17 +173,29 @@ const styles = {
     textAlign: "center",
   },
 
-  rightcontainer: {
+  rightcontaineritems: {
     width: "90%",
     height: "55px",
     backgroundColor: Colors.try2,
-    margin: "20px",
+    margin: "15px",
     borderRadius: "15px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "row",
+    textDecoration: "none",
   },
   smtext: {
     fontWeight: "bold",
-    color: "white",
-    textAlign: "center",
+    color: Colors.primary,
+    fontSize: "22px",
+  },
+  iconstyle: {
+    marginRight: "12px",
+    marginTop: "5px",
+    fontWeight: "bold",
+    fontSize: "30px",
+    color: "green",
   },
 };
 
