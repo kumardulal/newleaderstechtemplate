@@ -33,7 +33,7 @@ function Sidebar({ menuToggle }) {
   return (
     <BrowserRouter>
       <div className={sidebarDisplay}>
-        <div style={styles.windowsizeTitle}>........</div>
+        <div style={styles.windowsizeTitle}>@</div>
 
         <div style={styles.navlinkcontainer}>
           <a href="/projectlistpage" style={styles.navitems}>
@@ -51,25 +51,6 @@ function Sidebar({ menuToggle }) {
             <div>Home</div>
           </a>
         </div>
-
-        {/* \\\\\\\\\\////////////////// */}
-        <div style={styles.sidebarItems}>
-          <div>
-            <div style={styles.cardheadings}>
-              <div>Window </div>
-              <div>Height </div>
-              <div>Width </div>
-            </div>
-
-            <div style={styles.showcarditems}>
-              <div style={styles.pixelTitle}> pixels </div>
-              <div style={{ color: Colors.primary }}>{windowsize.height}px</div>
-              <div style={{ color: Colors.primary }}>{windowsize.width}px</div>
-            </div>
-          </div>
-        </div>
-
-        {/* //// */}
       </div>
     </BrowserRouter>
   );
@@ -93,7 +74,7 @@ const styles = {
     color: Colors.black,
     margin: "7px ",
   },
-  windowsizeTitle2: {
+  windowsizeTitle: {
     fontWeight: "bold",
     fontSize: "15px",
     color: Colors.black,
@@ -107,16 +88,7 @@ const styles = {
     color: Colors.fontcolor,
     justifyContent: "space-between",
   },
-  sidebarItems: {
-    position: "relative",
-    display: "flex",
-    backgroundColor: Colors.homeContentcolor,
-    height: "56px",
-    borderRadius: "7px",
-    alignItems: "center",
-    width: "180px",
-    justifyContent: "center",
-  },
+
   navlinkcontainer: {
     display: "flex",
     fontSize: "18px",
@@ -125,25 +97,27 @@ const styles = {
     // backgroundColor: "rgba(90, 158, 235, 0.555)",
     borderRadius: "55px",
     marginTop: "70px",
-    height: "35vh",
+    height: "70vh",
+    width: "240px",
     flexDirection: "column",
     justifyContent: "flex-start",
     alignItems: "center",
+    flexWrap: "no-wrap",
   },
 
   navitems: {
     display: "flex",
-    margin: "10px",
+    margin: "12px",
     backgroundColor: Colors.try3,
     borderRadius: "10px",
-    width: "200px",
-    height: "55px",
+    width: "150px",
+    height: "65px",
     alignItems: "center",
     justifyContent: "center",
-    borderTopRightRadius: "100px",
+    borderTopRightRadius: "200px",
     textDecoration: "none",
     fontSize: "18px",
-    color: Colors.homeContentcolor,
+    color: Colors.third,
   },
 };
 

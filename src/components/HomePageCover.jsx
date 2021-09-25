@@ -9,27 +9,33 @@ function HomePageCover() {
           display: "flex",
           flexDirection: "column",
           width: "350px",
-          height: "350px",
-          backgroundColor: "purple",
-          justifyContent: "space-evenly",
+          height: "300px",
+          backgroundColor: Colors.five,
+          justifyContent: "center",
           alignItems: "center",
-          flexWrap: "wrap",
           margin: "5px",
           borderTopRightRadius: "100px",
+          flexWrap: "nowrap",
         }}
       >
         <div
           style={{
-            fontSize: "20px",
-            color: Colors.white,
+            fontSize: "15px",
+            color: "white",
             fontWeight: "bold",
-            textAlign: "right",
+            textAlign: "left",
+            marginTop: "20px",
           }}
         >
           WHO ARE NEW LEADERS ?
         </div>
         <div
-          style={{ margin: "12px ", color: Colors.white, textAlign: "left" }}
+          style={{
+            margin: "25px ",
+            color: Colors.text1,
+            textAlign: "left",
+            marginBottom: "10px",
+          }}
         >
           New leaders are the people who are engaged in building resources for
           making a vision into reality. Inspired by all global innovative work
@@ -39,15 +45,16 @@ function HomePageCover() {
         </div>
       </div>
 
-      <div style={styles.minbox}>WE BELIEVE</div>
-
       <div style={styles.minbox}>
-        A business or company needs to run in a structured model depending on
-        what are your product and services . But if you want more better result
-        I want you to use the available pre-made Technology (hardware and
-        software). So you don't need to use your excess money in developing it
-        for big money if u can use what is available already. Make sure you use
-        it the right way .
+        <div style={{ color: "white", fontWeight: "bolder", fontSize: "25px" }}>
+          WE BELIEVE
+        </div>
+      </div>
+
+      <div style={styles.minbox2}>
+        We believe that the right understanding and technological edge can lead
+        small to big business to conduct quality deliveries and obtain organic
+        lead . Contact us for for IT support.
       </div>
     </div>
   );
@@ -57,10 +64,10 @@ const styles = {
   projectpagecontent: {
     display: "flex",
     flexDirection: "row",
-    backgroundColor: Colors.width,
+
     width: "90%",
     alignItems: "center",
-    justifyContent: "flex-start",
+    justifyContent: "flex-end",
     margin: "20px auto",
     flexWrap: "wrap",
     borderRadius: "5px",
@@ -68,15 +75,29 @@ const styles = {
   minbox: {
     display: "flex",
     height: "250px ",
-    width: "250px",
-    backgroundColor: Colors.homepagecontainercolor,
+    width: "280px",
+    backgroundColor: Colors.four,
     borderRadius: "10px",
     margin: "4px auto ",
     alignItems: "center",
     justifyContent: "center",
     textAlign: "left",
     padding: "10px",
-    color: "purple",
+    color: Colors.try3,
+  },
+  minbox2: {
+    display: "flex",
+    height: "300px ",
+    width: "350px",
+    backgroundColor: Colors.five,
+    borderRadius: "10px",
+    margin: "6px auto ",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "left",
+    padding: "10px",
+    color: Colors.text1,
+    borderTopLeftRadius: "150px",
   },
 };
 

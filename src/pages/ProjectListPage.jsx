@@ -1,50 +1,32 @@
 import React from "react";
 import Colors from "../components/smallcomponents/Color";
 
-function ProjectListPage() {
+function ProjectListPage(props) {
+  const { history } = props;
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-          width: "90% ",
-          right: "0px",
-          left: "0px",
+      <div style={styles.mainboxproject}>
+        <div style={{ height: "15vh" }}></div>
+        <div style={styles.pagetitleProject}>Projects</div>
 
-          marginRight: "auto",
-          marginLeft: "auto",
-        }}
-      >
-        <div
-          style={{
-            marginTop: "120px",
-            width: "100%",
-            height: "100px",
-            backgroundColor: Colors.primary,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            borderRadius: "10px",
-            fontSize: "25px",
-            fontWeight: "bold",
-            color: Colors.homeContentcolor,
-          }}
-        >
-          Projects
-        </div>
+        <input
+          placeholder="Search Projects"
+          type="text"
+          style={styles.searchbox}
+        />
 
         <div style={styles.blogsList}>
-          <div style={styles.flexitems}>
+          <div
+            style={styles.flexitems}
+            onClick={() => history.push("/projectlist/projectdetails")}
+          >
             <div style={styles.cardboxitem}>
               <img
                 style={styles.contentimage}
                 src="https://picsum.photos/205"
                 alt="display image1"
               />
-              <div style={styles.blogtitleanddate}>
+              <div style={styles.projecttitleanddate}>
                 <div style={styles.projectproperty_title}>
                   Project: The wrong doings by right person
                 </div>
@@ -60,7 +42,7 @@ function ProjectListPage() {
                 src="https://picsum.photos/209"
                 alt="display image1"
               />
-              <div style={styles.blogtitleanddate}>
+              <div style={styles.projecttitleanddate}>
                 <div style={styles.projectproperty_title}>
                   Project: The wrong doings by right person
                 </div>
@@ -78,7 +60,7 @@ function ProjectListPage() {
                 src="https://picsum.photos/288"
                 alt="display image1"
               />
-              <div style={styles.blogtitleanddate}>
+              <div style={styles.projecttitleanddate}>
                 <div style={styles.projectproperty_title}>
                   {" "}
                   Project: Enemy Ahead
@@ -95,7 +77,7 @@ function ProjectListPage() {
                 src="https://picsum.photos/296"
                 alt="display image1"
               />
-              <div style={styles.blogtitleanddate}>
+              <div style={styles.projecttitleanddate}>
                 <div style={styles.projectproperty_title}>
                   The way to bangla
                 </div>
@@ -128,8 +110,32 @@ function ProjectListPage() {
 }
 
 const styles = {
+  mainboxproject: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    width: "100% ",
+    right: "0px",
+    left: "0px",
+    marginRight: "0px",
+    marginLeft: "0px",
+  },
+  pagetitleProject: {
+    width: "90%",
+    height: "65px",
+    backgroundColor: Colors.four,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: "10px",
+    fontSize: "25px",
+    fontWeight: "bold",
+    color: Colors.try3,
+    maxWidth: "600px",
+  },
   blogsList: {
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.one,
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
@@ -141,23 +147,23 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: "350px",
-    height: "350px",
+    width: "270px",
+    height: "300px",
     margin: "10px",
     borderRadius: "10px",
     padding: "5px",
     backgroundColor: "white",
   },
   cardboxitem: {
-    height: "350px",
-    width: "370px",
-    backgroundColor: Colors.homeContentcolor,
+    height: "295px",
+    width: "267px",
+    backgroundColor: Colors.four,
     borderRadius: "25px",
     margin: "10px",
   },
   contentimage: {
-    width: "340px",
-    height: "241px",
+    width: "265px",
+    height: "202px",
     borderRadius: "15px",
   },
   project_titleanddate: {
@@ -170,7 +176,7 @@ const styles = {
     display: "flex",
     width: "90%",
     height: "30px",
-    backgroundColor: Colors.logo2,
+    backgroundColor: Colors.four,
     border: "solid 2px",
     borderRadius: "5px",
     padding: "10px",
@@ -182,8 +188,24 @@ const styles = {
   updateddate: {
     display: "flex",
     fontSize: "15px",
+    color: Colors.try3,
+  },
+  projecttitleanddate: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+  },
+  searchbox: {
+    width: "75%",
+    height: "40px",
     marginTop: "10px",
-    color: Colors.fontcolor,
+    borderRadius: "10px",
+    backgroundColor: Colors.one,
+    borderColor: Colors.four,
+    textAlign: "center",
+    maxWidth: "500px",
+    minWidth: "200px",
   },
 };
 

@@ -1,9 +1,8 @@
 import React from "react";
 import Colors from "../components/smallcomponents/Color";
-import contactimg from "../assets/cover.png";
+import contactimg from "../assets/contactus.png";
 import { SiTiktok } from "react-icons/si";
 import socialMedia from "../components/smallcomponents/SocialMedia.js";
-// import { useHistory } from "react-router-dom";
 
 import {
   AiOutlineFacebook,
@@ -12,95 +11,55 @@ import {
   AiFillTwitterCircle,
   AiFillLinkedin,
 } from "react-icons/ai";
-import { Redirect } from "react-router";
+
 // import one from "../assets/lottiefiles/one.json";
 
 function Contactus() {
   return (
-    <div
-      style={{
-        display: "flex",
-        position: "static",
-        flexDirection: "column",
-
-        width: "100% ",
-        // backgroundColor: Colors.secondary,
-      }}
-    >
-      <div style={{ height: "150px" }}>
-        iF YOU CAN SEE ME ,yOU ARE NEAR TO ME
-      </div>
+    <div style={styles.firstmain}>
+      {/* this is the div that divides top */}
+      <div style={{ height: "13vh" }}></div>
+      {/* start of all container div */}
       <div
         style={{
           display: "flex",
           flexDirection: "row",
           flexWrap: "wrap",
-          justifyContent: "center",
+          justifyContent: "space-around",
+          alignItems: "center",
         }}
       >
-        <div>
-          <div>
-            <img
-              style={{
-                width: "80%",
-                height: "300px",
-                borderRadius: "35px",
-              }}
-              src={contactimg}
-              alt="cover_od the contact"
-            />
-          </div>
-          <div>
-            <div style={{ margin: "20px auto" }}>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                }}
-              >
-                <input style={styles.imagestyle} placeholder="email address" />
-                <input style={styles.userintstyle} placeholder="Your message" />
-              </div>
-            </div>
+        {/* this is a gap */}
 
-            <div>
-              <button style={styles.textandbutton}>Submit</button>
-            </div>
+        <div>
+          <div style={{ margin: "20px auto" }}>
             <div
               style={{
-                width: "100%",
-                height: "2px",
-                backgroundColor: "grey",
-                marginTop: "15px",
+                display: "flex",
+                flexDirection: "column",
               }}
-            ></div>
+            >
+              <input style={styles.imagestyle} placeholder="email address" />
+              <input style={styles.userintstyle} placeholder="Your message" />
+            </div>
           </div>
+
+          <div>
+            <button style={styles.textandbutton}>Submit</button>
+          </div>
+          <div
+            style={{
+              width: "100%",
+              height: "2px",
+              backgroundColor: "grey",
+              marginTop: "15px",
+            }}
+          ></div>
         </div>
 
         {/* //another Socialmedioa containeer */}
-        <div
-          style={{
-            margin: "10px",
-            width: "390px",
-            height: "auto",
-            backgroundColor: Colors.homeContentcolor,
-            borderRadius: "20px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-evenly",
-          }}
-        >
-          <div
-            style={{
-              padding: "9px",
-              fontSize: "28px",
-              backgroundColor: "purple",
-              borderTopRightRadius: "20px",
-              borderTopLeftRadius: "20px",
-            }}
-          >
-            SOCIAL MEDIA
-          </div>
+        <div style={styles.socialmediacontainer}>
+          <div style={styles.socialMediamaintitle}>SOCIAL MEDIA</div>
           <a href={socialMedia.facebook} style={styles.rightcontaineritems}>
             <div style={styles.iconstyle}>
               <AiOutlineFacebook />
@@ -143,27 +102,53 @@ function Contactus() {
             <div style={styles.smtext}>Tiktok</div>
           </a>
         </div>
-        {/* //end of social media container */}
+
+        {/* amother */}
+        <img
+          style={styles.contactimage}
+          src={contactimg}
+          alt="contact us cover"
+        />
       </div>
+      {/* //end of social media container */}
     </div>
   );
 }
 
 const styles = {
+  firstmain: {
+    display: "flex",
+    position: "static",
+    flexDirection: "column",
+    width: "100% ",
+
+    // backgroundColor: Colors.secondary,
+  },
   textandbutton: {
     width: "300px",
     height: "50px",
     borderRadius: "25px",
     color: "white",
-    backgroundColor: Colors.black,
+    backgroundColor: Colors.try3,
     textAlign: "center",
   },
   imagestyle: {
-    width: "300px",
-    height: "50px",
+    width: "250px",
+    height: "40px",
     borderRadius: "25px",
     margin: "12px auto",
     textAlign: "center",
+  },
+  contactimage: {
+    width: "80%",
+    height: "550px",
+    borderRadius: "35px",
+    backgroundRepeat: "norepeat",
+    backgroundSize: "contain",
+    backgroundPosition: "center",
+    minWidth: "250px",
+    maxWidth: "450px",
+    // backgroundImage: `URL(${contactimg})`,
   },
   userintstyle: {
     width: "80%",
@@ -172,11 +157,32 @@ const styles = {
     margin: "12px auto",
     textAlign: "center",
   },
+  socialmediacontainer: {
+    margin: "10px",
+    width: "100%",
+    height: "550px",
+    backgroundColor: Colors.try3,
+    borderRadius: "20px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-evenly",
+    maxWidth: "450px",
+    minWidth: "200px",
+  },
+  socialMediamaintitle: {
+    padding: "20px",
+    fontSize: "27px",
+    backgroundColor: Colors.three,
+    borderTopRightRadius: "20px",
+    borderTopLeftRadius: "20px",
+    color: "white",
+    textAlign: "center",
+  },
 
   rightcontaineritems: {
     width: "90%",
     height: "55px",
-    backgroundColor: Colors.try2,
+    backgroundColor: Colors.four,
     margin: "15px",
     borderRadius: "15px",
     display: "flex",
@@ -187,7 +193,7 @@ const styles = {
   },
   smtext: {
     fontWeight: "bold",
-    color: Colors.primary,
+    color: Colors.one,
     fontSize: "22px",
   },
   iconstyle: {

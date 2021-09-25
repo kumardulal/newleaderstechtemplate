@@ -34,10 +34,11 @@ function Header() {
               alignItems: "center",
               color: "green",
               textDecoration: "none",
+              marginLeft: "30px",
             }}
             href="/"
           >
-            <div style={{ fontSize: "42px", color: Colors.fontcolor }}>
+            <div style={{ fontSize: "45px", color: Colors.fontcolor }}>
               <AiOutlineRadarChart />
             </div>
             <div style={styles.headerfont}> New Leaders Tech</div>
@@ -59,7 +60,7 @@ const styles = {
   headersidebarflex: {
     display: "flex",
     position: "absolute",
-    flexDirection: "row",
+    flexDirection: "column",
     alignItems: "initial",
   },
   header: {
@@ -68,17 +69,18 @@ const styles = {
     justifyContent: "space-between",
     alignItems: "center",
     flexDirection: "row",
-    backgroundColor: Colors.logocolor,
+    backgroundColor: Colors.four,
     padding: "10px",
     fontFamily: "Arial",
     height: "10%",
-    width: "95%",
-    top: "2px",
+    width: "100%",
+    top: "0px",
     borderTopRightRadius: "25px",
   },
   iconMenu: {
-    fontSize: "35px",
-    color: "#08c",
+    marginRight: "30px",
+    fontSize: "45px",
+    color: Colors.try4,
     padding: "10px",
   },
   headerfont: {

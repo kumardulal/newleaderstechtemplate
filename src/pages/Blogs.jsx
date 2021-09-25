@@ -1,49 +1,29 @@
 import React from "react";
 import Colors from "../components/smallcomponents/Color";
 
-function Blogs() {
+function Blogs(props) {
+  const { history } = props;
+
+  const handleblogClick = () => {
+    history.push("/blogs/blogdetails");
+    console.log("i am still with you");
+  };
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-          width: "90% ",
-          right: "0px",
-          left: "0px",
-
-          marginRight: "auto",
-          marginLeft: "auto",
-        }}
-      >
-        <div
-          style={{
-            marginTop: "120px",
-            width: "100%",
-            height: "100px",
-            backgroundColor: Colors.primary,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            borderRadius: "10px",
-            fontSize: "25px",
-            fontWeight: "bold",
-            color: Colors.homeContentcolor,
-          }}
-        >
-          Blogs
-        </div>
+      <div style={styles.mainbox}>
+        <div style={{ height: "15vh" }}></div>
+        <div style={styles.pagetitle}>Blogs</div>
+        <input style={styles.searchbox} placeholder="Search Blogs" />
 
         <div style={styles.blogsList}>
-          <div style={styles.flexitems}>
+          <div style={styles.flexitems} onClick={() => handleblogClick()}>
             <div style={styles.cardboxitem}>
               <img
                 style={styles.contentimage}
-                src="https://picsum.photos/215"
+                src="https://picsum.photos/285"
                 alt="display image1"
               />
+
               <div style={styles.blogtitleanddate}>
                 <div style={styles.blogproperty_title}>
                   The wrong doings by right person
@@ -89,7 +69,7 @@ function Blogs() {
             <div style={styles.cardboxitem}>
               <img
                 style={styles.contentimage}
-                src="https://picsum.photos/211"
+                src="https://picsum.photos/281"
                 alt="display image1"
               />
               <div style={styles.blogtitleanddate}>
@@ -103,7 +83,7 @@ function Blogs() {
             <div style={styles.cardboxitem}>
               <img
                 style={styles.contentimage}
-                src="https://picsum.photos/211"
+                src="https://picsum.photos/241"
                 alt="display image1"
               />
               <div style={styles.blogtitleanddate}>
@@ -123,8 +103,33 @@ function Blogs() {
 }
 
 const styles = {
+  mainbox: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    width: "100% ",
+    right: "0px",
+    left: "0px",
+    marginRight: "auto",
+    marginLeft: "auto",
+  },
+  pagetitle: {
+    width: "90%",
+    height: "70px",
+    backgroundColor: Colors.four,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: "10px",
+    fontSize: "25px",
+    fontWeight: "bold",
+    color: Colors.try3,
+    maxWidth: "600px",
+    minWidth: "200px",
+  },
   blogsList: {
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.one,
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
@@ -136,23 +141,23 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: "350px",
-    height: "350px",
+    width: "280px",
+    height: "310px",
     margin: "10px",
     borderRadius: "10px",
     padding: "5px",
     backgroundColor: "white",
   },
   cardboxitem: {
-    height: "350px",
-    width: "370px",
-    backgroundColor: Colors.homeContentcolor,
+    height: "300px",
+    width: "280px",
+    backgroundColor: Colors.three,
     borderRadius: "25px",
     margin: "10px",
   },
   contentimage: {
-    width: "340px",
-    height: "241px",
+    width: "250px",
+    height: "200px",
     borderRadius: "15px",
   },
   blogtitleanddate: {
@@ -165,7 +170,7 @@ const styles = {
     display: "flex",
     width: "90%",
     height: "30px",
-    backgroundColor: Colors.yellow,
+    backgroundColor: Colors.four,
     border: "solid 2px",
     borderRadius: "5px",
     padding: "10px",
@@ -179,6 +184,17 @@ const styles = {
     fontSize: "15px",
     marginTop: "10px",
     color: Colors.fontcolor,
+  },
+  searchbox: {
+    width: "70%",
+    height: "40px",
+    marginTop: "10px",
+    borderRadius: "10px",
+    backgroundColor: Colors.one,
+    borderColor: Colors.four,
+    textAlign: "center",
+    minWidth: "150px",
+    maxWidth: "500px",
   },
 };
 
