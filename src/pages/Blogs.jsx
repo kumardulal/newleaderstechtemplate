@@ -1,5 +1,7 @@
 import React from "react";
-import Colors from "../components/smallcomponents/Color";
+import Colors from "../components/collections/Color";
+
+import Services from "../components/smallcomponents/Services.jsx";
 
 function Blogs(props) {
   const { history } = props;
@@ -97,6 +99,7 @@ function Blogs(props) {
 
           <div style={styles.flexitems}></div>
         </div>
+        <Services />
       </div>
     </>
   );

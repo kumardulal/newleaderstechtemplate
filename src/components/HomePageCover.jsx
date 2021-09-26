@@ -1,5 +1,5 @@
 import React from "react";
-import Colors from "./smallcomponents/Color";
+import Colors from "./collections/Color";
 import "../components/stylecss/extra.css";
 function HomePageCover() {
   return (
@@ -10,7 +10,7 @@ function HomePageCover() {
           flexDirection: "column",
           width: "350px",
           height: "300px",
-          backgroundColor: Colors.five,
+          backgroundColor: Colors.six,
           justifyContent: "center",
           alignItems: "center",
           margin: "5px",
@@ -64,13 +64,14 @@ const styles = {
   projectpagecontent: {
     display: "flex",
     flexDirection: "row",
-
-    width: "90%",
     alignItems: "center",
-    justifyContent: "flex-end",
+    width: "80%",
+    justifyContent: "space-around",
     margin: "20px auto",
     flexWrap: "wrap",
     borderRadius: "5px",
+    maxWidth: "1800px",
+    minWidth: "270px",
   },
   minbox: {
     display: "flex",

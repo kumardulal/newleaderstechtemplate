@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
-import Colors from "../smallcomponents/Color";
+import Colors from "../collections/Color";
 import "../stylecss/extra.css";
 
 function Sidebar({ menuToggle }) {

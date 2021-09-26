@@ -1,5 +1,6 @@
 import React from "react";
-import Colors from "../components/smallcomponents/Color";
+import Colors from "../components/collections/Color";
+import Services from "../components/smallcomponents/Services";
 
 function ProjectListPage(props) {
   const { history } = props;
@@ -104,6 +105,7 @@ function ProjectListPage(props) {
 
           <div style={styles.flexitems}></div>
         </div>
+        <Services />
       </div>
     </>
   );

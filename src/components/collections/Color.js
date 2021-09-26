@@ -1,6 +1,5 @@
 const Colors = ({
 
-
     secondary: " #F0E5CF",
     fontcolor: "rgb(0, 10, 29)",
     black: "#251c12",
@@ -23,8 +22,10 @@ const Colors = ({
     try3: "rgb(37, 55, 71)",
     third: "#C8C6C6",
     five: "#418e70",
+    six: "#4e868f",
 
-    text1: "#dfede8"
+    text1: "#dfede8",
+    text2: "#d57233"
 
 
 

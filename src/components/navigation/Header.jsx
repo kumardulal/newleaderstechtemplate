@@ -6,7 +6,7 @@ import {
 } from "react-icons/ai";
 
 import Sidebar from "./Sidebar";
-import Colors from "../smallcomponents/Color";
+import Colors from "../collections/Color";
 import { BrowserRouter } from "react-router-dom";
 
 function Header() {
@@ -72,7 +72,7 @@ const styles = {
     backgroundColor: Colors.four,
     padding: "10px",
     fontFamily: "Arial",
-    height: "10%",
+    height: "9%",
     width: "100%",
     top: "0px",
     borderTopRightRadius: "25px",
