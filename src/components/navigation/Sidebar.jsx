@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import Colors from "../collections/Color";
-import "../stylecss/extra.css";
+import "../styles/extra.css";
+import { AiFillCloseCircle } from "react-icons/ai";
 
-function Sidebar({ menuToggle }) {
+function Sidebar({ menuToggle, setMenuToggle }) {
   const [windowsize, setWindowSize] = useState({
     height: window.innerHeight,
     width: window.innerWidth,
   });
+
   const [sidebarDisplay, setSideBarDisplay] = useState("side-bar");
 
   useEffect(() => {
@@ -30,10 +32,26 @@ function Sidebar({ menuToggle }) {
     return sidebarDisplay;
   }, [menuToggle, windowsize, sidebarDisplay]);
 
+  const handleCloseIcon = () => {
+    //this is triggring the state of another component
+    setMenuToggle("false");
+  };
+
   return (
     <BrowserRouter>
       <div className={sidebarDisplay}>
-        <div style={styles.windowsizeTitle}>@</div>
+        <div style={styles.windowsizeTitle}>
+          <AiFillCloseCircle
+            style={{
+              fontSize: "60px",
+              textAlign: "right",
+              fontWeight: "bold",
+              color: Colors.black,
+              marginTop: "10px",
+            }}
+            onClick={() => handleCloseIcon()}
+          />
+        </div>
 
         <div style={styles.navlinkcontainer}>
           <a href="/projectlistpage" style={styles.navitems}>
@@ -75,9 +93,10 @@ const styles = {
     margin: "7px ",
   },
   windowsizeTitle: {
-    fontWeight: "bold",
-    fontSize: "15px",
-    color: Colors.black,
+    width: "93%",
+    display: "flex",
+    justifyContent: "flex-end",
+    alignItems: "center",
   },
 
   showcarditems: {

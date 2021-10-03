@@ -6,12 +6,12 @@ export default function Services() {
   return (
     <img
       style={{
-        width: "100%",
-        maxWidth: "1370px",
+        width: "98%",
+        maxWidth: "1700px",
         height: "auto",
         margin: "20px",
         border: `solid 2px ${Colors.five}`,
-        maxHeight: "600px",
+
         minHeight: "270px",
       }}
       src={Picture.services}

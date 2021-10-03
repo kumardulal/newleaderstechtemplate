@@ -7,7 +7,6 @@
 
 .homecontent {
   position: static;
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -22,22 +21,23 @@
   position: fixed;
   display: flex;
   right: 0px;
-  width: "300px";
+  width: 70%;
   background-color: #4b65879f;
-  height: 550px;
+  height: 500px;
   border-top: solid 5px rgb(37, 55, 71);
   border-left-color: rgb(100, 0, 55);
   border-right-color: rgb(80, 75, 7);
-  top: 2%;
+  top: 0.5px;
   bottom: 10%;
-
-  border-top-right-radius: 1000px;
-  border-bottom-left-radius: 700px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 90px;
   animation-name: sidebarAnimation;
   animation-duration: 8s;
   animation-iteration-count: 3;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
+  transition: 1.5s cubic-bezier(1, 0, 0, 5);
 }
 
 .sidebar-hide-mood {
@@ -52,14 +52,14 @@
     position: fixed;
     display: flex;
     right: 0px;
-    width: 350px;
+    width: 50%;
     background-color: #36b0b49f;
-    height: 550px;
+    height: 800px;
     border-top: solid 5px;
     /* border-top: solid 5px rgba(78, 188, 202, 0.726); */
     border-left-color: rgb(100, 0, 55);
     border-right-color: rgb(80, 75, 7);
-    top: 2%;
+    top: 0.5px;
     border-top-right-radius: 1000px;
     border-bottom-left-radius: 700px;
     border-top-left-radius: 10px;
@@ -78,17 +78,17 @@
     position: fixed;
     display: flex;
     right: 0px;
-    width: 300px;
+    width: 50%;
     background-color: #4b65879f;
-    height: 670px;
+    height: 780px;
     border-top: solid 5px;
     border-top: solid 5px rgb(37, 55, 71);
     border-left-color: rgb(100, 0, 55);
 
-    top: 2%;
-    border-top-right-radius: 1000px;
+    top: 0.5px;
+    border-top-right-radius: 20px;
 
-    border-bottom-left-radius: 700px;
+    border-bottom-left-radius: 70px;
     border-top-left-radius: 10px;
     animation-name: sidebarAnimation;
     animation-duration: 8s;
@@ -101,17 +101,17 @@
   .side-bar {
     position: fixed;
     display: flex;
-    right: 3%;
-    width: 300px;
+
+    width: 50%;
     background-color: #4b65879f;
-    height: 700px;
+    height: 800px;
     border-top: solid 10px rgb(37, 55, 71);
     border-left-color: rgb(100, 0, 55);
 
-    top: 2%;
-    border-top-right-radius: 1000px;
-
-    border-bottom-left-radius: 700px;
+    top: 0.5px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 70px;
 
     animation-name: sidebarAnimation;
     animation-duration: 8s;

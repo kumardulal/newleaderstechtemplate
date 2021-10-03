@@ -1,6 +1,7 @@
 import React from "react";
 import Colors from "./collections/Color";
-import "../components/stylecss/extra.css";
+import "../components/styles/extra.css";
+
 function HomePageCover() {
   return (
     <div style={styles.projectpagecontent}>
@@ -8,8 +9,8 @@ function HomePageCover() {
         style={{
           display: "flex",
           flexDirection: "column",
-          width: "350px",
-          height: "300px",
+          width: "340px",
+          height: "250px",
           backgroundColor: Colors.six,
           justifyContent: "center",
           alignItems: "center",
@@ -20,11 +21,11 @@ function HomePageCover() {
       >
         <div
           style={{
-            fontSize: "15px",
+            fontSize: "14px",
             color: "white",
             fontWeight: "bold",
             textAlign: "left",
-            marginTop: "20px",
+            marginTop: "2px",
           }}
         >
           WHO ARE NEW LEADERS ?
@@ -52,9 +53,11 @@ function HomePageCover() {
       </div>
 
       <div style={styles.minbox2}>
-        We believe that the right understanding and technological edge can lead
-        small to big business to conduct quality deliveries and obtain organic
-        lead . Contact us for for IT support.
+        <div style={{ paddingLeft: "15px" }}>
+          We believe that the right understanding and technological edge can
+          lead small to big business to conduct quality deliveries and obtain
+          organic lead . Contact us for for IT support.
+        </div>
       </div>
     </div>
   );
@@ -65,21 +68,20 @@ const styles = {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    width: "80%",
+    width: "100%",
     justifyContent: "space-around",
-    margin: "20px auto",
+    marginTop: "20px ",
     flexWrap: "wrap",
     borderRadius: "5px",
-    maxWidth: "1800px",
-    minWidth: "270px",
+    backgroundColor: Colors.four,
   },
   minbox: {
     display: "flex",
-    height: "250px ",
-    width: "280px",
+    height: "210px ",
+    width: "270px",
     backgroundColor: Colors.four,
     borderRadius: "10px",
-    margin: "4px auto ",
+    margin: "6px",
     alignItems: "center",
     justifyContent: "center",
     textAlign: "left",
@@ -88,11 +90,12 @@ const styles = {
   },
   minbox2: {
     display: "flex",
-    height: "300px ",
-    width: "350px",
+    height: "250px ",
+    width: "320px",
+
     backgroundColor: Colors.five,
     borderRadius: "10px",
-    margin: "6px auto ",
+    margin: "6px",
     alignItems: "center",
     justifyContent: "center",
     textAlign: "left",

@@ -1,11 +1,11 @@
 import React from "react";
 import Colors from "../components/collections/Color";
-import Services from "../components/smallcomponents/Services";
 import ResponsivePlayer from "../components/smallcomponents/Video/ResponsivePlayer";
 
 export default function ProjectDetails() {
   return (
     <div style={styles.productdetailmainCont}>
+      <div style={{ height: "12vh" }}></div>
       <div style={styles.projecttitle}>PROJECT: CLINIC </div>
 
       {/* start */}
@@ -29,7 +29,7 @@ export default function ProjectDetails() {
               width: "80%",
               fontSize: "13px",
               minWidth: "250px",
-              maxWidth: "500px",
+              maxWidth: "800px",
             }}
           >
             INTRO: This is the small project done to uplift the skill so that i
@@ -45,6 +45,11 @@ export default function ProjectDetails() {
           justifyContent: "center",
           alignItems: "center",
           flexWrap: "wrap",
+          width: "100%",
+          maxWidth: "1600px",
+          backgroundColor: Colors.one,
+          alignSelf: "center",
+          borderRadius: "20px",
         }}
       >
         <div style={styles.descproject}>
@@ -75,7 +80,6 @@ export default function ProjectDetails() {
           marginBottom: "25px",
         }}
       >
-        <Services />
         <div>I LIVE INSIDE THOSE VIBRATION</div>
       </div>
     </div>
@@ -84,43 +88,43 @@ export default function ProjectDetails() {
 const styles = {
   productdetailmainCont: {
     display: "flex",
-    marginTop: "13vh",
+
     flexDirection: "column",
     justifyContent: "space-around",
     alignItem: "center",
-
-    // backgroundColor: Colors.four,
+    width: "100%",
+    backgroundColor: Colors.four,
+    color: Colors.text1,
   },
   projecttitle: {
     height: "45px",
     width: "85%",
     fontWeight: "bold",
     fontSize: "20px",
-    color: Colors.try3,
+    color: Colors.text1,
     marginLeft: "10%",
-    backgroundColor: Colors.six,
+    backgroundColor: Colors.five,
     borderRadius: "10px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     margin: "10px auto",
     minWidth: "200px",
-    maxWidth: "600px",
+    maxWidth: "800px",
   },
   videoplayerdiv: {
-    width: "94%",
+    width: "95%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: Colors.black,
-
-    maxWidth: "680px",
+    maxWidth: "800px",
     border: "solid 10px",
     borderRadius: "20px",
   },
   introdiv: {
     margin: "10px",
-    backgroundColor: Colors.four,
+    backgroundColor: Colors.six,
     borderRadius: "10px",
     display: "flex",
     justifyContent: "center",
@@ -128,22 +132,21 @@ const styles = {
     height: "100px",
   },
   descproject: {
-    width: "20%",
-    height: "190px",
+    width: "98%",
+    height: "200px",
     margin: "12px",
-    backgroundColor: Colors.six,
+    backgroundColor: Colors.five,
     borderRadius: "10px",
     display: "flex",
     justifyContent: "space-around",
     alignItems: "center",
     flexWrap: "wrap",
     maxWidth: "450px",
-    minWidth: "150px",
   },
   descprojectlast: {
     width: "80%",
     height: "300px",
-    backgroundColor: Colors.four,
+    backgroundColor: Colors.six,
     borderRadius: "10px",
     margin: "10px auto",
     display: "flex",

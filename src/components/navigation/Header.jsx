@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import {
-  AiOutlineUnorderedList,
-  AiOutlineRadarChart,
-  AiFillCloseCircle,
-} from "react-icons/ai";
+import { AiOutlineUnorderedList, AiOutlineRadarChart } from "react-icons/ai";
 
 import Sidebar from "./Sidebar";
 import Colors from "../collections/Color";
@@ -16,10 +12,11 @@ function Header() {
   function handlemenuCLick() {
     if (menuToggle === false) {
       setMenuToggle(true);
-      setMenuBarState(<AiFillCloseCircle />);
-    } else {
-      setMenuToggle(false);
       setMenuBarState(<AiOutlineUnorderedList />);
+      // setMenuBarState(<AiFillCloseCircle />);
+    } else {
+      setMenuBarState(<AiOutlineUnorderedList />);
+      setMenuToggle(true);
     }
   }
 
@@ -50,7 +47,7 @@ function Header() {
         </div>
 
         <div>
-          <Sidebar menuToggle={menuToggle} />
+          <Sidebar menuToggle={menuToggle} setMenuToggle={setMenuToggle} />
         </div>
       </div>
     </BrowserRouter>

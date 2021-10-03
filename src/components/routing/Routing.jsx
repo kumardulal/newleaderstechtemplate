@@ -2,10 +2,11 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import BlogDetailsPage from "../../pages/BlogDetailsPage";
 import Blogs from "../../pages/Blogs";
-import Contactus from "../../pages/Contactus";
+import Contactpage from "../../pages/Contactpage";
 import Homepage from "../../pages/Homepage";
 import ProjectDetails from "../../pages/ProjectDetails";
 import ProjectListPage from "../../pages/ProjectListPage";
+import ApiMessage from "../api/ApiMessage";
 // import ContentContainer from '../navigation/ContentContainer';
 import Nav from "../navigation/Nav";
 
@@ -19,7 +20,7 @@ function Routing() {
             <Switch>
               <Route path="/" exact component={Homepage} />
               <Route path="/me" exact component={Me} />
-              <Route path="/contactus" exact component={Contactus} />
+              <Route path="/contactus" exact component={Contactpage} />
               <Route
                 path="/projectlistpage"
                 exact
@@ -37,6 +38,7 @@ function Routing() {
                 exact
                 component={ProjectDetails}
               />
+              <Route path="/message" exact component={ApiMessage} />
             </Switch>
           </div>
         </Router>

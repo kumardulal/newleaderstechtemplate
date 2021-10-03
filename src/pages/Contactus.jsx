@@ -11,6 +11,35 @@ function Contactus() {
   return (
     <div style={styles.firstmain}>
       <div style={styles.contactSocialWrapper}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            height: "auto",
+            width: "80%",
+          }}
+        >
+          <div
+            style={{
+              height: "8px",
+              backgroundColor: Colors.four,
+              width: "70%",
+              borderTopRightRadius: "50px",
+              borderTopLeftRadius: "50px",
+            }}
+          ></div>
+          <div
+            style={{
+              height: "8px",
+              backgroundColor: Colors.six,
+              width: "80%",
+              margin: "10px ",
+              borderTopRightRadius: "50px",
+              borderTopLeftRadius: "50px",
+            }}
+          ></div>
+        </div>
+
         <ContactForm />
         <SocialMediaView />
       </div>
@@ -34,7 +63,7 @@ const styles = {
     // backgroundColor: Colors.try2,
   },
   firstmain: {
-    marginTop: "13vh",
+    marginTop: "5px",
     display: "flex",
     position: "static",
     width: "100% ",

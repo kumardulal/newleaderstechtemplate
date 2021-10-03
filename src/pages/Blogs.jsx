@@ -1,8 +1,6 @@
 import React from "react";
 import Colors from "../components/collections/Color";
 
-import Services from "../components/smallcomponents/Services.jsx";
-
 function Blogs(props) {
   const { history } = props;
 
@@ -13,8 +11,8 @@ function Blogs(props) {
   return (
     <>
       <div style={styles.mainbox}>
-        <div style={{ height: "15vh" }}></div>
-        <div style={styles.pagetitle}>Blogs</div>
+        <div style={{ height: "11vh" }}></div>
+        {/* <div style={styles.pagetitle}>Blogs</div> */}
         <input style={styles.searchbox} placeholder="Search Blogs" />
 
         <div style={styles.blogsList}>
@@ -96,10 +94,7 @@ function Blogs(props) {
               </div>
             </div>
           </div>
-
-          <div style={styles.flexitems}></div>
         </div>
-        <Services />
       </div>
     </>
   );
@@ -107,6 +102,7 @@ function Blogs(props) {
 
 const styles = {
   mainbox: {
+    // marginTop: "12.5vh",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -118,9 +114,10 @@ const styles = {
     marginLeft: "auto",
   },
   pagetitle: {
-    width: "90%",
-    height: "70px",
-    backgroundColor: Colors.four,
+    marginTop: "5px",
+    width: "80%",
+    height: "60px",
+    backgroundColor: Colors.six,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -132,34 +129,35 @@ const styles = {
     minWidth: "200px",
   },
   blogsList: {
-    backgroundColor: Colors.one,
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    borderRadius: "10px",
-    marginTop: "20px",
+    borderRadius: "1px",
+    marginTop: "5px",
     flexWrap: "wrap",
+    width: "100%",
   },
   flexitems: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: "280px",
-    height: "310px",
-    margin: "10px",
+    width: "300px",
+    maxWidth: "350px",
+    height: "320px",
+    margin: "25px",
     borderRadius: "10px",
-    padding: "5px",
-    backgroundColor: "white",
+
+    backgroundColor: Colors.five,
   },
   cardboxitem: {
     height: "300px",
-    width: "280px",
-    backgroundColor: Colors.three,
+    width: "100%",
+    backgroundColor: Colors.four,
     borderRadius: "25px",
     margin: "10px",
   },
   contentimage: {
-    width: "250px",
+    width: "100%",
     height: "200px",
     borderRadius: "15px",
   },

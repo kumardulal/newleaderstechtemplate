@@ -1,32 +1,86 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HomeItemBox from "../components/HomeItemBox";
 import HomePageCover from "../components/HomePageCover";
 import Colors from "../components/collections/Color";
 import Picture from "../components/collections/Pictures";
 // import cover from "../assets/founder.png";
-import "../components/stylecss/extra.css";
-import Services from "../components/smallcomponents/Services";
+import "../components/styles/extra.css";
+import { useSpring, animated } from "react-spring";
+// import TestAnimation from "../components/styles/animations/TestAnimation";
 
 function Homepage() {
+  // useEffect(() => {
+  //   console.log("I am present");
+  //   return (
+  //     <div style={{ height: "100vh", width: "100%", backgroundColor: "red" }}>
+  //       This is mee
+  //     </div>
+  //   );
+  // });
+  //
+  //Animations styles here destructured for bigger
+  const animations = {
+    animation1: useSpring({
+      loop: true,
+      from: {
+        height: "auto",
+        width: "80%",
+        alignSelf: "center",
+        opacity: "0%",
+      },
+      to: {
+        width: "98%",
+        alignSelf: "center",
+        opacity: "100%",
+      },
+      config: { duration: 5000 },
+    }),
+
+    animation2: useSpring({
+      loop: true,
+      from: {
+        height: "auto",
+        width: "0%",
+        alignSelf: "center",
+        opacity: "0%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        maxWidth: "1700px",
+      },
+      to: {
+        width: "98%",
+        alignSelf: "center",
+        opacity: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        maxWidth: "1700px",
+      },
+      config: { duration: 2000 },
+    }),
+  };
+
   return (
     // style={styles.homespace_state_min}
+
     <div style={styles.homepage}>
       <div style={{ height: "12vh" }}></div>
       <div style={styles.coverimageparent}>
-        <img
-          src={Picture.homewall}
-          style={styles.coverimage}
-          alt="landing page wall"
-        />
+        <animated.div style={animations.animation2}>
+          <img
+            src={Picture.homewall}
+            style={styles.coverimage}
+            alt="landing page wall"
+          />
+        </animated.div>
       </div>
 
-      <div>
+      <animated.div style={animations.animation1}>
         <HomePageCover />
-      </div>
+      </animated.div>
+
       <HomeItemBox />
-      <div style={styles.coverimageparent}>
-        <Services />
-      </div>
 
       <div style={styles.containertext}>WE LIVE INSIDE THOSE VIBRATION</div>
     </div>
@@ -37,11 +91,16 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     position: "static",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
   },
   coverimageparent: {
+    width: "100%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    maxWidth: "1700px",
   },
   coverimage: {
     height: "50%",
@@ -56,9 +115,7 @@ const styles = {
     display: "flex",
     textAlign: "center",
     justifyContent: "center",
-    height: "50px",
-    color: "GREEN",
-    marginTop: "10px",
+    color: "green",
   },
   serviceimage: {
     height: "60%",

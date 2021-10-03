@@ -5,6 +5,7 @@ import Picture from "../components/collections/Pictures";
 function BlogDetailsPage() {
   return (
     <div style={styles.starting}>
+      <div style={{ height: "12vh" }}></div>
       <div
         style={{
           display: "flex",
@@ -13,7 +14,7 @@ function BlogDetailsPage() {
           width: "100%",
           maxWidth: "1400px",
           flexDirection: "column",
-          fontFamily: "initial",
+
           border: `solid 2px ${Colors.five}`,
         }}
       >
@@ -75,31 +76,17 @@ function BlogDetailsPage() {
           </div>
         </div>
       </div>
-      {/* service details image here */}
-      <img
-        style={{
-          width: "100%",
-          maxWidth: "1400px",
-          height: "auto",
-          margin: "20px",
-          border: `solid 2px ${Colors.five}`,
-          maxHeight: "600px",
-          minHeight: "270px",
-        }}
-        src={Picture.services}
-        alt="services details"
-      />
     </div>
   );
 }
 const styles = {
   starting: {
-    marginTop: "13.5vh",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-around",
     width: "100%",
+    fontFamily: "Helvetica Neue",
   },
   blogtitle: {
     height: "70px",
@@ -107,28 +94,30 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: Colors.six,
+    // backgroundColor: Colors.six,
   },
   blogtitletext: {
     fontWeight: "bolder",
     textAlign: "center",
     fontSize: "21px",
-    color: Colors.text1,
+    color: Colors.try3,
   },
   blogimage: {
     height: "auto",
-    width: "100%",
+    width: "92%",
     // backgroundImage: `URL(${Picture.homewall})`,
     backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
     maxHeight: "556px",
     minHeight: "230px",
+    borderRadius: "5px",
+    margin: "5px",
   },
   blogdivs: {
     width: "90%",
     height: "auto",
     margin: "20px auto",
-    backgroundColor: Colors.six,
+    backgroundColor: Colors.four,
     display: "flex",
     justifyContent: "start",
     alignItems: "center",
@@ -138,18 +127,18 @@ const styles = {
   blogintrotext: {
     textAlign: "left",
     color: Colors.text1,
-    fontSize: "18px",
+    fontSize: "16px",
     margin: "6px",
   },
   blogdesc: {
     padding: "10px",
     textAlign: "left",
-    fontSize: "18px",
-    color: Colors.one,
+    fontSize: "16px",
+    color: Colors.text1,
   },
   blogConclusion: {
     color: Colors.text1,
-    fontSize: "18px",
+    fontSize: "16px",
   },
 };
 

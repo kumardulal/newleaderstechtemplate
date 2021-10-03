@@ -1,6 +1,7 @@
 import "./App.css";
 
 import Routing from "./components/routing/Routing";
+import Contactus from "./pages/Contactus";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <div className="App">
         <div>
           <Routing />
+          <Contactus />
         </div>
       </div>
     </>

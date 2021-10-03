@@ -1,6 +1,48 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import ApiMessage from "./api/ApiMessage";
 import Colors from "./collections/Color";
 function ContactForm() {
+  const [messagedata, setMessageData] = useState({
+    sendername: "sendername",
+    senderidentity: "sender ",
+    messagesubject: "subject",
+    message: "demo",
+  });
+
+  //handlers
+  const handleSenderName = (e) => {
+    const { value } = e.target;
+    setMessageData((prevState) => ({
+      ...prevState,
+      sendername: value,
+    }));
+  };
+  const handleSenderIdentity = (e) => {
+    const { value } = e.target;
+    setMessageData((prevState) => ({
+      ...prevState,
+      senderidentity: value,
+    }));
+  };
+  const handleMessageSubject = (e) => {
+    const { value } = e.target;
+    setMessageData((prevState) => ({
+      ...prevState,
+      messagesubject: value,
+    }));
+  };
+
+  const handleMessage = (e) => {
+    const { value } = e.target;
+    setMessageData((prevState) => ({
+      ...prevState,
+      message: value,
+    }));
+  };
+  const handleSubmit = () => {
+    ApiMessage(messagedata);
+  };
+
   return (
     <div style={styles.contactdformMain}>
       <div
@@ -29,14 +71,30 @@ function ContactForm() {
           </div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <input style={styles.inputs} placeholder="Full Name" type="text" />
+          <input
+            style={styles.inputs}
+            placeholder="Full Name"
+            type="text"
+            onChange={handleSenderName}
+          />
           <input
             style={styles.inputs}
             placeholder="Email/PhoneNumber"
             type="email"
+            onChange={handleSenderIdentity}
           />
-          <input style={styles.inputs} placeholder="Subject" type="text" />
-          <textarea style={styles.inputs} placeholder="Message" type="text" />
+          <input
+            style={styles.inputs}
+            placeholder="Subject"
+            type="text"
+            onChange={handleMessageSubject}
+          />
+          <textarea
+            style={styles.inputs}
+            placeholder="Message"
+            type="text"
+            onChange={handleMessage}
+          />
         </div>
         {/* Divider line */}
         <div
@@ -49,7 +107,9 @@ function ContactForm() {
           }}
         />
         <div style={{ margin: "20px" }}>
-          <button style={styles.submitbtn}>Submit</button>
+          <button style={styles.submitbtn} onClick={handleSubmit}>
+            Submit
+          </button>
         </div>
       </div>
     </div>
@@ -63,9 +123,9 @@ const styles = {
     height: "510px",
     backgroundColor: Colors.six,
     minWidth: "280px",
-    maxWidth: "700px",
+    maxWidth: "470px",
     borderRadius: "15PX",
-    margin: "6px",
+    margin: "6px ",
     justifyContent: "center",
     alignItems: "center",
   },

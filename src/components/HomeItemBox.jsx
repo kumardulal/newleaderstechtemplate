@@ -1,8 +1,9 @@
 import React from "react";
-import "../components/stylecss/extra.css";
+import "../components/styles/extra.css";
 
 function HomeItemBox() {
   return (
+    //check the main style in extra.css
     <div className="homecontent">
       <div style={styles.cardbox}>
         <img

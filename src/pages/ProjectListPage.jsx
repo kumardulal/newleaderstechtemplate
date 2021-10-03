@@ -1,15 +1,13 @@
 import React from "react";
 import Colors from "../components/collections/Color";
-import Services from "../components/smallcomponents/Services";
 
 function ProjectListPage(props) {
   const { history } = props;
   return (
     <>
       <div style={styles.mainboxproject}>
-        <div style={{ height: "15vh" }}></div>
-        <div style={styles.pagetitleProject}>Projects</div>
-
+        {/* <div style={styles.pagetitleProject}>Projects</div> */}
+        <div style={{ height: "12vh" }}></div>
         <input
           placeholder="Search Projects"
           type="text"
@@ -105,7 +103,6 @@ function ProjectListPage(props) {
 
           <div style={styles.flexitems}></div>
         </div>
-        <Services />
       </div>
     </>
   );
@@ -124,8 +121,8 @@ const styles = {
     marginLeft: "0px",
   },
   pagetitleProject: {
-    width: "90%",
-    height: "65px",
+    width: "80%",
+    height: "55px",
     backgroundColor: Colors.four,
     display: "flex",
     alignItems: "center",
@@ -135,36 +132,37 @@ const styles = {
     fontWeight: "bold",
     color: Colors.try3,
     maxWidth: "600px",
+    marginTop: "5px",
   },
   blogsList: {
-    backgroundColor: Colors.one,
+    // backgroundColor: Colors.one,
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
     borderRadius: "10px",
-    marginTop: "20px",
+    marginTop: "10px",
     flexWrap: "wrap",
   },
   flexitems: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: "270px",
-    height: "300px",
+    width: "300px",
+    height: "auto",
     margin: "10px",
     borderRadius: "10px",
-    padding: "5px",
-    backgroundColor: "white",
+
+    backgroundColor: Colors.five,
   },
   cardboxitem: {
-    height: "295px",
-    width: "267px",
+    height: "300px",
+    width: "100%",
     backgroundColor: Colors.four,
     borderRadius: "25px",
     margin: "10px",
   },
   contentimage: {
-    width: "265px",
+    width: "100%",
     height: "202px",
     borderRadius: "15px",
   },
@@ -201,7 +199,6 @@ const styles = {
   searchbox: {
     width: "75%",
     height: "40px",
-    marginTop: "10px",
     borderRadius: "10px",
     backgroundColor: Colors.one,
     borderColor: Colors.four,
